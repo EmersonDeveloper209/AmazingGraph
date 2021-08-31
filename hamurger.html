@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;
+        padding: 0;
+    box-sizing: 0;
+}
+        html ,body {
+            height: 100%;
+        }
+    .caixa-menu{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #check-menu{
+        position: absolute;
+        opacity: 0;
+}
+label{
+    cursor: pointer;
+    position: relative;
+    display: block;
+    height: 22px;
+    width: 30px;
+
+}     
+label span {
+    position: absolute;
+    display: block;
+    height: 5px;
+    width: 100%;
+    border-radius: 60px;
+    background-color: rgb(10, 10, 10);
+    transition: 0.25s ease-in-out;
+}
+label span:nth-child(1){
+    top: 0;
+}
+label span:nth-child(2){
+    top: 8px;
+}
+label span:nth-child(3){
+    top: 16px;
+}
+#check-menu:checked + label span:nth-child(1){
+    transform: rotate(-45deg);
+    top: 8px;
+
+}
+#check-menu:checked + label span:nth-child(2){
+    opacity: 0;
+    
+}
+#check-menu:checked + label span:nth-child(3){
+    transform: rotate(45deg);
+    top: 8px;
+    
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="caixa-menu"><input type="checkbox" id="check-menu">
+    <label for="check-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+</div>
+</body>
+</html>
